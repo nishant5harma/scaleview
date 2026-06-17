@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/case-studies/page": "/case-studies",
+  "/contact/page": "/contact",
+  "/favicon.ico/route": "/favicon.ico",
+  "/industries/page": "/industries",
+  "/page": "/",
+  "/partners/page": "/partners",
+  "/services/[slug]/page": "/services/[slug]",
+  "/why-scaleview/page": "/why-scaleview"
+}
