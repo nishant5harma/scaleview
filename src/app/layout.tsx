@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   description:
     "ScaleView — your AWS & Azure cloud consulting and AI-native managed IT partner for SMBs and mid-market. Migration, DevOps, cybersecurity & more.",
   icons: {
-    icon: "/images/logo.png",
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    apple: "/apple-icon.png",
   },
 };
 

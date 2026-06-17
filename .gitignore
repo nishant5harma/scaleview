@@ -14,7 +14,7 @@
 /coverage
 
 # next.js
-/out/
+# /out/ — static export is committed for deployment
 
 # production
 # /build
