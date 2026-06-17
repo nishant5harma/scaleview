@@ -1,26 +1,146 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand palette derived from the ScaleView cloud logo */
+  --color-brand: #0b5cff;
+  --color-brand-600: #0a4fe0;
+  --color-brand-700: #0840b8;
+  --color-cyan: #38bdf8;
+  --color-ink: #0a1124;
+  --color-ink-soft: #111a33;
+  --color-navy: #060b1c;
+  --color-muted: #6b7691;
+  --color-line: #e6eaf2;
+
+  --font-display: var(--font-display), "sans-serif";
+  --font-sans: var(--font-sans), "sans-serif";
+
+  --shadow-glow: 0 0 0 6px rgba(11, 92, 255, 0.18);
+  --shadow-card: 0 20px 50px -20px rgba(10, 17, 36, 0.35);
+
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-marquee-rev: marquee-rev 38s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-spin-slow: spin 18s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0a1124;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--color-line);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(11, 92, 255, 0.18);
+}
+
+/* Utility helpers */
+.container-x {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 3.5vw, 1.5rem);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, #0b5cff 0%, #38bdf8 60%, #0b5cff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+/* Subtle dotted grid background for dark sections */
+.bg-grid-dark {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+.bg-grid-light {
+  background-image: radial-gradient(
+    rgba(11, 92, 255, 0.08) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+}
+
+/* Animated conic glow ring */
+.glow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    var(--color-brand) 30%,
+    var(--color-cyan) 50%,
+    transparent 70%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: var(--animate-spin-slow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
 }
