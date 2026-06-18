@@ -41,7 +41,7 @@ export default function SectionHeading({
       {description && (
         <Reveal delay={0.1}>
           <p
-            className={`mt-4 text-base leading-relaxed ${
+            className={`mt-4 text-base leading-relaxed sm:mt-5 ${
               light ? "text-white/60" : "text-muted"
             }`}
           >

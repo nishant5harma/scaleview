@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import { ArrowRight } from "./Icons";
-import { PHONE_DISPLAY_LIST } from "@/lib/contact";
+import { ADDRESS, PHONES } from "@/lib/contact";
 
 const COLUMNS = [
   {
@@ -17,7 +17,7 @@ const COLUMNS = [
   },
 ];
 
-const SOCIALS = ["in", "X", "f", "gh"];
+const SOCIALS = ["in", "X", "f"];
 
 export default function Footer() {
   return (
@@ -28,14 +28,27 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Logo light />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/55">
-              Your certified partner for AWS, Azure and Google Cloud —
+              Your certified partner for AWS and Azure —
               engineering infrastructure built to scale.
             </p>
-            <p className="mt-3 text-sm text-white/55">
-              <a href="tel:+918448111011" className="transition-colors hover:text-cyan">
-                {PHONE_DISPLAY_LIST}
-              </a>
-            </p>
+            <div className="mt-4 flex flex-col gap-1.5">
+              {PHONES.map((phone) => (
+                <a
+                  key={phone.tel}
+                  href={`tel:${phone.tel}`}
+                  className="text-sm text-white/55 transition-colors hover:text-cyan"
+                >
+                  {phone.display}
+                </a>
+              ))}
+            </div>
+            <address className="mt-4 max-w-xs not-italic text-sm leading-relaxed text-white/55">
+              {ADDRESS.line1}
+              <br />
+              {ADDRESS.line2}
+              <br />
+              {ADDRESS.line3}
+            </address>
             <div className="mt-6 flex gap-3">
               {SOCIALS.map((s) => (
                 <a

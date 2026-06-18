@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   motion,
   useScroll,
@@ -21,6 +22,7 @@ import {
 
 type Service = {
   num: string;
+  slug: string;
   title: string;
   text: string;
   img: string;
@@ -30,13 +32,15 @@ type Service = {
 const SERVICES: Service[] = [
   {
     num: "01",
+    slug: "cloud-services",
     title: "Cloud Services",
-    text: "Migrate, optimize, and scale on AWS, Azure, or GCP — with certified architects guiding every step.",
+    text: "Migrate, optimize, and scale on AWS and Azure — with certified architects guiding every step.",
     img: "/images/svc-cloud-real.webp",
     Icon: CloudIcon,
   },
   {
     num: "02",
+    slug: "cybersecurity",
     title: "Cybersecurity",
     text: "End-to-end security — threat detection, compliance, and zero-trust architecture.",
     img: "/images/svc-security-real.webp",
@@ -44,6 +48,7 @@ const SERVICES: Service[] = [
   },
   {
     num: "03",
+    slug: "data-ai",
     title: "Data & AI / GenAI",
     text: "Turn raw data into decisions — analytics platforms, AI models, and Generative AI systems.",
     img: "/images/svc-ai-real.webp",
@@ -51,6 +56,7 @@ const SERVICES: Service[] = [
   },
   {
     num: "04",
+    slug: "devops",
     title: "DevOps & Automation",
     text: "CI/CD pipelines, infrastructure as code, and intelligent automation that compounds.",
     img: "/images/svc-devops-real.webp",
@@ -58,6 +64,7 @@ const SERVICES: Service[] = [
   },
   {
     num: "05",
+    slug: "managed-services",
     title: "Managed Services",
     text: "24/7 monitoring, proactive support, and infrastructure management — under one roof.",
     img: "/images/svc-managed-real.webp",
@@ -65,6 +72,7 @@ const SERVICES: Service[] = [
   },
   {
     num: "06",
+    slug: "digital-transformation",
     title: "Digital Transformation",
     text: "Strategy meets execution — finding where technology creates the most business impact.",
     img: "/images/svc-transform-real.webp",
@@ -87,6 +95,7 @@ function DeckCard({
   const targetScale = 1 - (total - 1 - index) * 0.045;
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
   const stackTop = `calc(4.75rem + ${index * 0.65}rem)`;
+  const eagerImage = index === 0;
 
   return (
     <div
@@ -119,13 +128,13 @@ function DeckCard({
             {service.text}
           </p>
 
-          <a
-            href="#contact"
+          <Link
+            href={`/services/${service.slug}`}
             className="group relative mt-8 inline-flex items-center gap-2 text-sm font-semibold text-cyan"
           >
             Learn more
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
 
         {/* IMAGE SIDE */}
@@ -136,6 +145,8 @@ function DeckCard({
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
+            priority={eagerImage}
+            loading={eagerImage ? undefined : "lazy"}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent lg:bg-gradient-to-r lg:from-navy/80 lg:via-transparent lg:to-transparent" />
         </div>
@@ -153,16 +164,16 @@ export default function WhatWeDo() {
 
   return (
     <section id="services" className="relative bg-[#f5f7fc]">
-      <div className="container-x pt-24">
+      <div className="container-x pt-24 pb-6 sm:pb-8">
         <SectionHeading
           eyebrow="What we do"
           title="Engineered systems for the"
           highlight="next decade of enterprise"
-          description="From cloud foundations to GenAI products — six interconnected practices, delivered as one platform."
+          description="From cloud foundations to GenAI products — six interconnected practices, delivered as one platform. We design, build, and operate across AWS and Azure so your teams can move faster, with security and scale built in from day one."
         />
       </div>
 
-      <div ref={container} className="container-x relative -mt-8 pb-20">
+      <div ref={container} className="container-x relative mt-6 pb-20 sm:mt-10 md:mt-12">
         {SERVICES.map((service, i) => (
           <DeckCard
             key={service.num}

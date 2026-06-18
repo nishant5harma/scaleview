@@ -110,7 +110,7 @@ export default function LeadPopup() {
             <button
               onClick={dismiss}
               aria-label="Close"
-              className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full bg-white/80 text-ink shadow-sm transition-colors hover:bg-white md:text-white md:bg-white/15 md:hover:bg-white/25"
+              className="absolute right-4 top-4 z-20 grid h-9 w-9 place-items-center rounded-full border border-line bg-white text-ink shadow-md transition-colors hover:border-brand/30 hover:bg-[#f5f7fc] hover:text-brand"
             >
               <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round">
                 <path d="M6 6l12 12M18 6 6 18" />

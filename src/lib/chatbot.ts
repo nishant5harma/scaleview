@@ -30,9 +30,9 @@ const RULES: Rule[] = [
       "ScaleView offers six core services:\n\n• Cloud Services — migration, architecture & cost optimization\n• Cybersecurity — zero-trust, compliance & threat protection\n• Data & AI — analytics pipelines & production GenAI\n• DevOps & Automation — CI/CD, IaC & platform engineering\n• Managed Services — 24/7 monitoring & operations\n• Digital Transformation — modern apps & legacy modernization\n\nWhich area fits your project?",
   },
   {
-    keywords: ["cloud", "migrate", "migration", "aws", "azure", "gcp", "google cloud"],
+    keywords: ["cloud", "migrate", "migration", "aws", "azure"],
     reply:
-      "We're certified AWS, Azure & Google Cloud partners. Typical cloud migrations run 6–12 weeks with 20–40% cost reduction targets. Discovery starts within 1–2 weeks of agreement. Want to book a free 30-minute consultation?",
+      "We're certified AWS and Microsoft Azure partners. Typical cloud migrations run 6–12 weeks with 20–40% cost reduction targets. Discovery starts within 1–2 weeks of agreement. Want to book a free 30-minute consultation?",
   },
   {
     keywords: ["security", "cyber", "compliance", "soc", "iso", "gdpr", "zero trust"],
@@ -62,7 +62,7 @@ const RULES: Rule[] = [
   {
     keywords: ["partner", "certified", "aws partner", "azure partner"],
     reply:
-      "Yes — we hold AWS Partner Network status alongside Microsoft Azure and Google Cloud credentials. Our architects carry active certifications across all three hyperscalers, with partner pricing and direct vendor escalation.",
+      "Yes — we hold AWS Partner Network status alongside Microsoft Azure credentials. Our architects carry active certifications across both hyperscalers, with partner pricing and direct vendor escalation.",
   },
   {
     keywords: ["start", "timeline", "how fast", "when can", "kick off"],

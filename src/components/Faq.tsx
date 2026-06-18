@@ -12,7 +12,7 @@ const FAQS = [
   },
   {
     q: "Are you actually an AWS Partner?",
-    a: "Yes. We hold AWS Partner Network status alongside Microsoft Azure and Google Cloud partner credentials. Our architects carry active certifications across all three hyperscalers, and we pass partner pricing and direct vendor escalation through to clients.",
+    a: "Yes. We hold AWS Partner Network status alongside Microsoft Azure partner credentials. Our architects carry active certifications across both hyperscalers, and we pass partner pricing and direct vendor escalation through to clients.",
   },
   {
     q: "How do you handle security and data residency?",

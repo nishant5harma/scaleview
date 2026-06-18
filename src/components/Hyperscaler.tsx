@@ -48,14 +48,14 @@ export default function Hyperscaler() {
           <Reveal delay={0.05}>
             <h2 className="mt-4 max-w-xl font-display text-3xl font-bold leading-[1.12] tracking-tight text-ink sm:text-4xl lg:text-[2.7rem]">
               Production-grade cloud on{" "}
-              <span className="text-gradient">every major hyperscaler</span>
+              <span className="text-gradient">AWS and Azure</span>
             </h2>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="mt-5 max-w-lg text-base leading-relaxed text-muted">
-              Certified architects and engineers across AWS, Azure and Google
-              Cloud. Direct vendor escalation paths, partner pricing and
+              Certified architects and engineers across AWS and Microsoft
+              Azure. Direct vendor escalation paths, partner pricing and
               reference architectures hardened in production.
             </p>
           </Reveal>

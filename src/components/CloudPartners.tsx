@@ -5,7 +5,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const LOGOS = [
   "AWS",
   "Microsoft Azure",
-  "Google Cloud",
   "OpenAI",
   "Snowflake",
   "Databricks",

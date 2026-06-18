@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
-import { ArrowUpRight, StarIcon } from "./Icons";
+import { ArrowUpRight } from "./Icons";
 import { PHONES, WHATSAPP_URL } from "@/lib/contact";
 
 const QUESTIONS = [
@@ -18,13 +18,6 @@ export default function StartWith() {
       <div className="container-x relative grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-14">
         {/* LEFT — copy */}
         <div>
-          <Reveal>
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80">
-              <StarIcon className="h-3.5 w-3.5 text-amber-400" />
-              Rated 4.9/5 by 120+ teams
-            </span>
-          </Reveal>
-
           <Reveal delay={0.05}>
             <h2 className="mt-6 font-display text-4xl font-bold leading-[1.08] tracking-tight sm:text-4xl md:text-5xl">
               Start with <span className="text-gradient">ScaleView</span>

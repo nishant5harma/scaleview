@@ -4,7 +4,6 @@ import SectionHeading from "./SectionHeading";
 const INTEGRATIONS = [
   { name: "AWS", logo: "/images/logos/aws.svg" },
   { name: "Azure", logo: "/images/logos/azure.svg" },
-  { name: "Google Cloud", logo: "/images/logos/googlecloud.svg" },
   { name: "Snowflake", logo: "/images/logos/snowflake.svg" },
   { name: "Databricks", logo: "/images/logos/databricks.svg" },
   { name: "Datadog", logo: "/images/logos/datadog.svg" },

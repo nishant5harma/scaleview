@@ -7,9 +7,9 @@ import Reveal from "@/components/Reveal";
 import { ArrowRight, CheckIcon } from "@/components/Icons";
 
 export const metadata: Metadata = {
-  title: "AWS, Azure & GCP Partners for SMBs & Mid-Market | ScaleView",
+  title: "AWS & Azure Partners for SMBs & Mid-Market | ScaleView",
   description:
-    "ScaleView partners with AWS, Azure, GCP & OpenAI to deliver certified cloud consulting, AI & managed IT solutions for SMBs and mid-market businesses ready to scale.",
+    "ScaleView partners with AWS and Microsoft Azure to deliver certified cloud consulting, AI & managed IT solutions for SMBs and mid-market businesses ready to scale.",
   alternates: { canonical: "/partners" },
 };
 
@@ -23,51 +23,6 @@ const CATEGORIES: Category[] = [
     items: [
       { name: "Amazon Web Services", logo: "/images/logos/aws.svg" },
       { name: "Microsoft Azure", logo: "/images/logos/azure.svg" },
-      { name: "Google Cloud Platform", logo: "/images/logos/googlecloud.svg" },
-    ],
-  },
-  {
-    eyebrow: "Security",
-    label: "Security platforms",
-    items: [
-      { name: "CrowdStrike", color: "#E01F3D" },
-      { name: "SentinelOne", color: "#6B0AEA" },
-      { name: "Palo Alto Networks", logo: "/images/logos/paloalto.svg" },
-      { name: "Microsoft Defender", logo: "/images/logos/defender.svg" },
-      { name: "HashiCorp Vault", logo: "/images/logos/vault.svg" },
-    ],
-  },
-  {
-    eyebrow: "Data & analytics",
-    label: "Data platforms",
-    items: [
-      { name: "Snowflake", logo: "/images/logos/snowflake.svg" },
-      { name: "Databricks", logo: "/images/logos/databricks.svg" },
-      { name: "Microsoft Fabric", color: "#117865" },
-      { name: "Power BI", color: "#D89C00" },
-      { name: "Tableau", color: "#E97627" },
-      { name: "Looker", logo: "/images/logos/looker.svg" },
-    ],
-  },
-  {
-    eyebrow: "DevOps & automation",
-    label: "DevOps toolchain",
-    items: [
-      { name: "HashiCorp Terraform", logo: "/images/logos/terraform.svg" },
-      { name: "GitHub", logo: "/images/logos/github.svg" },
-      { name: "GitLab", logo: "/images/logos/gitlab.svg" },
-      { name: "Kubernetes", logo: "/images/logos/kubernetes.svg" },
-      { name: "Docker", logo: "/images/logos/docker.svg" },
-      { name: "Datadog", logo: "/images/logos/datadog.svg" },
-      { name: "Grafana", logo: "/images/logos/grafana.svg" },
-    ],
-  },
-  {
-    eyebrow: "Productivity",
-    label: "Collaboration platforms",
-    items: [
-      { name: "Microsoft 365", logo: "/images/logos/microsoft365.svg" },
-      { name: "Google Workspace", color: "#1A73E8" },
     ],
   },
 ];
@@ -76,12 +31,12 @@ const WHY = [
   {
     num: "01",
     title: "Rigorous certification",
-    desc: "Active certifications across all major hyperscalers and platforms — passed real technical assessments, not paid badges.",
+    desc: "Active certifications across AWS and Azure — passed real technical assessments, not paid badges.",
   },
   {
     num: "02",
     title: "Direct vendor escalation",
-    desc: "Partner-tier support paths and named contacts at AWS, Microsoft, and Google that most companies can't access.",
+    desc: "Partner-tier support paths and named contacts at AWS and Microsoft that most companies can't access.",
   },
   {
     num: "03",
@@ -93,7 +48,6 @@ const WHY = [
 const HYPERSCALERS = [
   { name: "AWS", logo: "/images/logos/aws.svg" },
   { name: "Azure", logo: "/images/logos/azure.svg" },
-  { name: "Google Cloud", logo: "/images/logos/googlecloud.svg" },
 ];
 
 function PlatformChip({ name, logo, color }: Platform) {
@@ -150,14 +104,14 @@ export default function PartnersPage() {
                 </Reveal>
                 <Reveal delay={0.05}>
                   <h1 className="mt-6 font-display text-4xl font-bold leading-[1.06] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.3rem]">
-                    AWS Partner. Azure Partner.{" "}
-                    <span className="text-gradient">Google Cloud Partner.</span>
+                    AWS Partner.{" "}
+                    <span className="text-gradient">Azure Partner.</span>
                   </h1>
                 </Reveal>
                 <Reveal delay={0.1}>
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-white/65 sm:text-lg">
-                    ScaleView holds active partner status across the three major
-                    hyperscalers and works exclusively with best-in-class
+                    ScaleView holds active partner status with AWS and
+                    Microsoft Azure and works exclusively with best-in-class
                     platforms — with certified expertise behind every
                     recommendation.
                   </p>
@@ -223,7 +177,7 @@ export default function PartnersPage() {
                       <p className="font-display text-sm font-bold text-ink">
                         Certified Partner
                       </p>
-                      <p className="text-xs text-muted">AWS · Azure · GCP</p>
+                      <p className="text-xs text-muted">AWS · Azure</p>
                     </div>
                   </div>
                 </div>
@@ -366,9 +320,6 @@ export default function PartnersPage() {
                     </span>
                     <span className="inline-flex items-center gap-1.5">
                       <CheckIcon className="h-3.5 w-3.5" /> Azure Solutions Partner
-                    </span>
-                    <span className="inline-flex items-center gap-1.5">
-                      <CheckIcon className="h-3.5 w-3.5" /> Google Cloud Partner
                     </span>
                   </div>
                 </div>

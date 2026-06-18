@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CloudServicesPage from "@/components/CloudServicesPage";
 import Reveal from "@/components/Reveal";
 import { getService, getServiceSlugs, SERVICES } from "@/lib/services";
 import { ArrowRight, ArrowUpRight, CheckIcon } from "@/components/Icons";
@@ -51,7 +52,6 @@ const HERO_HIGHLIGHTS: Record<string, { value: string; label: string }[]> = {
 const TRUST_LOGOS = [
   { name: "AWS", src: "/images/logos/aws.svg" },
   { name: "Azure", src: "/images/logos/azure.svg" },
-  { name: "Google Cloud", src: "/images/logos/googlecloud.svg" },
 ];
 
 export function generateStaticParams() {
@@ -81,6 +81,16 @@ export default async function ServicePage({
   const { slug } = await params;
   const service = getService(slug);
   if (!service) notFound();
+
+  if (service.slug === "cloud-services") {
+    return (
+      <>
+        <Header solid />
+        <CloudServicesPage />
+        <Footer />
+      </>
+    );
+  }
 
   const highlights = HERO_HIGHLIGHTS[service.slug] ?? [];
 
@@ -235,7 +245,7 @@ export default async function ServicePage({
                         <p className="font-display text-sm font-bold text-ink">
                           Certified Partner
                         </p>
-                        <p className="text-xs text-muted">AWS · Azure · GCP</p>
+                        <p className="text-xs text-muted">AWS · Azure</p>
                       </div>
                     </div>
 

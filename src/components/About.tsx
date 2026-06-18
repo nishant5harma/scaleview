@@ -11,7 +11,7 @@ const REASONS = [
   {
     no: "02",
     title: "Certified Expertise",
-    desc: "AWS, Azure, and GCP certified engineers and architects with deep, hands-on experience.",
+    desc: "AWS and Azure certified engineers and architects with deep, hands-on experience.",
   },
   {
     no: "03",

@@ -1,11 +1,10 @@
 import Reveal from "./Reveal";
-import CountUp from "./CountUp";
 
 const STATS = [
-  { to: 1.2, suffix: "B+", decimals: 1, label: "Requests served daily" },
-  { to: 70, suffix: "%", label: "Faster time to market" },
-  { to: 15, suffix: "min", label: "Critical response time" },
-  { to: 24, suffix: "/7", label: "Monitoring & support" },
+  { headline: "Enterprise scale", label: "Requests served reliably" },
+  { headline: "Faster delivery", label: "Time to market" },
+  { headline: "Rapid response", label: "Critical incident handling" },
+  { headline: "Always on", label: "Monitoring & support" },
 ];
 
 export default function Stats() {
@@ -18,8 +17,8 @@ export default function Stats() {
       <div className="container-x relative grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-4 md:gap-x-8 md:gap-y-10">
         {STATS.map((s, i) => (
           <Reveal key={s.label} delay={i * 0.08}>
-            <p className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
-              <CountUp to={s.to} suffix={s.suffix} decimals={s.decimals ?? 0} />
+            <p className="font-display text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
+              {s.headline}
             </p>
             <p className="mt-2 text-sm text-white/55">{s.label}</p>
           </Reveal>

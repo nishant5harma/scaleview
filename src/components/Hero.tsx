@@ -54,7 +54,7 @@ export default function Hero() {
               className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/80 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
             >
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
-              AWS · Azure · Google Cloud Partner
+              AWS · Azure Partner
             </motion.span>
 
             <motion.h1
@@ -69,9 +69,8 @@ export default function Hero() {
               variants={item}
               className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-white/60 sm:mt-6 sm:text-base md:text-lg"
             >
-              Architect, migrate and run multi-cloud infrastructure across the
-              world&apos;s top three platforms — built for speed, security and
-              serious scale.
+              Architect, migrate and run cloud infrastructure on AWS and
+              Azure — built for speed, security and serious scale.
             </motion.p>
 
             <motion.div variants={item} className="mt-7 sm:mt-9">
@@ -100,7 +99,8 @@ export default function Hero() {
                 alt="ScaleView cloud engineers reviewing infrastructure in a data center"
                 fill
                 priority
-                sizes="(max-width: 1024px) 50vw, 90vw"
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover object-[62%_center]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
@@ -119,11 +119,13 @@ export default function Hero() {
         <div className="relative h-full w-full overflow-hidden rounded-tl-[80px] xl:rounded-tl-[100px]">
           <Image
             src="/images/hero-team.webp"
-            alt="ScaleView cloud engineers reviewing infrastructure in a data center"
+            alt=""
             fill
-            priority
+            loading="lazy"
+            fetchPriority="low"
             sizes="(max-width: 1280px) 62vw, 66vw"
             className="object-cover object-[58%_center]"
+            aria-hidden
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/70 via-navy/15 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-navy to-transparent" />
