@@ -5,25 +5,25 @@ import { ArrowRight } from "./Icons";
 
 const POSTS = [
   {
-    img: "/images/service-devops.png",
+    img: "/images/service-devops.webp",
     category: "DevOps",
     date: "Jun 02, 2026",
     title: "Cutting deploy times by 70% with GitOps",
   },
   {
-    img: "/images/service-security.png",
+    img: "/images/service-security.webp",
     category: "Security",
     date: "May 21, 2026",
     title: "A practical guide to zero-trust on the cloud",
   },
   {
-    img: "/images/service-analytics.png",
+    img: "/images/service-analytics.webp",
     category: "FinOps",
     date: "May 09, 2026",
     title: "Five FinOps wins that pay for themselves",
   },
   {
-    img: "/images/platform-visual.png",
+    img: "/images/platform-visual.webp",
     category: "Multi-cloud",
     date: "Apr 28, 2026",
     title: "When multi-cloud actually makes sense",

@@ -32,42 +32,42 @@ const SERVICES: Service[] = [
     num: "01",
     title: "Cloud Services",
     text: "Migrate, optimize, and scale on AWS, Azure, or GCP — with certified architects guiding every step.",
-    img: "/images/svc-cloud-real.png",
+    img: "/images/svc-cloud-real.webp",
     Icon: CloudIcon,
   },
   {
     num: "02",
     title: "Cybersecurity",
     text: "End-to-end security — threat detection, compliance, and zero-trust architecture.",
-    img: "/images/svc-security-real.png",
+    img: "/images/svc-security-real.webp",
     Icon: ShieldIcon,
   },
   {
     num: "03",
     title: "Data & AI / GenAI",
     text: "Turn raw data into decisions — analytics platforms, AI models, and Generative AI systems.",
-    img: "/images/svc-ai-real.png",
+    img: "/images/svc-ai-real.webp",
     Icon: ChipIcon,
   },
   {
     num: "04",
     title: "DevOps & Automation",
     text: "CI/CD pipelines, infrastructure as code, and intelligent automation that compounds.",
-    img: "/images/svc-devops-real.png",
+    img: "/images/svc-devops-real.webp",
     Icon: LayersIcon,
   },
   {
     num: "05",
     title: "Managed Services",
     text: "24/7 monitoring, proactive support, and infrastructure management — under one roof.",
-    img: "/images/svc-managed-real.png",
+    img: "/images/svc-managed-real.webp",
     Icon: HeadsetIcon,
   },
   {
     num: "06",
     title: "Digital Transformation",
     text: "Strategy meets execution — finding where technology creates the most business impact.",
-    img: "/images/svc-transform-real.png",
+    img: "/images/svc-transform-real.webp",
     Icon: BoltIcon,
   },
 ];
@@ -86,15 +86,19 @@ function DeckCard({
   const { Icon } = service;
   const targetScale = 1 - (total - 1 - index) * 0.045;
   const scale = useTransform(progress, [index / total, 1], [1, targetScale]);
+  const stackTop = `calc(4.75rem + ${index * 0.65}rem)`;
 
   return (
-    <div className="sticky top-20 flex min-h-[78vh] items-center justify-center px-1 lg:min-h-[82vh]">
+    <div
+      className="sticky flex min-h-[68vh] items-center justify-center px-1 py-3 sm:min-h-[72vh] sm:py-4 lg:min-h-[82vh]"
+      style={{ top: stackTop, zIndex: index + 1 }}
+    >
       <motion.div
-        style={{ scale, top: `${index * 1.5}rem` }}
-        className="relative grid w-full overflow-hidden rounded-[2rem] border border-white/10 bg-navy shadow-[0_40px_90px_-40px_rgba(6,11,28,0.9)] lg:grid-cols-2"
+        style={{ scale }}
+        className="relative grid w-full overflow-hidden rounded-[2rem] border border-white/10 bg-navy shadow-[0_40px_90px_-40px_rgba(6,11,28,0.9)] md:grid-cols-2"
       >
         {/* TEXT SIDE */}
-        <div className="relative order-2 flex flex-col justify-center p-8 sm:p-10 lg:order-1 lg:min-h-[520px] lg:p-14">
+        <div className="relative order-2 flex flex-col justify-center p-8 sm:p-10 md:p-12 lg:order-1 lg:min-h-[520px] lg:p-14">
           <div className="pointer-events-none absolute inset-0 bg-grid-dark opacity-40" />
           <div className="relative flex items-center justify-between">
             <span className="font-display text-sm font-semibold text-white/40">
@@ -125,7 +129,7 @@ function DeckCard({
         </div>
 
         {/* IMAGE SIDE */}
-        <div className="relative order-1 min-h-[260px] overflow-hidden sm:min-h-[340px] lg:order-2 lg:min-h-[520px]">
+        <div className="relative order-1 min-h-[240px] overflow-hidden sm:min-h-[320px] md:min-h-[360px] lg:order-2 lg:min-h-[520px]">
           <Image
             src={service.img}
             alt={service.title}

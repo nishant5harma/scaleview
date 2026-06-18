@@ -45,70 +45,69 @@ export default function Hero() {
         </span>
       </div>
 
-      {/* ── TEXT COLUMN ── */}
-      <div className="container-x relative z-10 flex min-h-0 flex-col justify-center pt-28 pb-10 sm:pt-32 sm:pb-14 lg:min-h-[92vh] lg:max-w-[46%] lg:pt-36 lg:pb-20 xl:max-w-[42%]">
-        <motion.div variants={container} initial="hidden" animate="show">
-          <motion.span
-            variants={item}
-            className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/80 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
-          >
-            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
-            AWS · Azure · Google Cloud Partner
-          </motion.span>
-
-          <motion.h1
-            variants={item}
-            className="mt-5 max-w-[18ch] font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-balance sm:mt-6 sm:text-[2.5rem] md:text-[2.85rem] lg:text-[3rem] xl:text-[3.4rem]"
-          >
-            Scale your cloud infrastructure{" "}
-            <span className="text-gradient">without limits</span>
-          </motion.h1>
-
-          <motion.p
-            variants={item}
-            className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-white/60 sm:mt-6 sm:text-base md:text-lg"
-          >
-            Architect, migrate and run multi-cloud infrastructure across the
-            world&apos;s top three platforms — built for speed, security and
-            serious scale.
-          </motion.p>
-
-          <motion.div variants={item} className="mt-7 sm:mt-9">
-            <a
-              href="#contact"
-              data-lead
-              className="group inline-flex items-center gap-3 rounded-full bg-white py-2 pl-2 pr-6 text-sm font-semibold text-ink transition-all hover:shadow-[0_0_0_6px_rgba(255,255,255,0.12)] sm:pr-7"
+      {/* ── TEXT + IMAGE (stacked mobile, side-by-side tablet+) ── */}
+      <div className="container-x relative z-10 pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-0">
+        <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:min-h-[92vh] lg:gap-16">
+          <motion.div variants={container} initial="hidden" animate="show">
+            <motion.span
+              variants={item}
+              className="inline-flex max-w-full items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/80 sm:px-4 sm:text-xs sm:tracking-[0.18em]"
             >
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-white transition-transform group-hover:translate-x-0.5 sm:h-11 sm:w-11">
-                <ArrowRight className="h-4 w-4" />
-              </span>
-              Free consultation
-            </a>
-          </motion.div>
-        </motion.div>
-      </div>
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-cyan" />
+              AWS · Azure · Google Cloud Partner
+            </motion.span>
 
-      {/* ── MOBILE / TABLET IMAGE (below text, < lg) ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: EASE_OUT }}
-        className="container-x relative z-10 pb-16 sm:pb-20 lg:hidden"
-      >
-        <div className="relative">
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] ring-1 ring-white/10 sm:rounded-[2rem] md:aspect-[16/10]">
-            <Image
-              src="/images/hero-team.png"
-              alt="ScaleView cloud engineers reviewing infrastructure in a data center"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 90vw"
-              className="object-cover object-[62%_center]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
-          </div>
+            <motion.h1
+              variants={item}
+              className="mt-5 max-w-[18ch] font-display text-[2rem] font-bold leading-[1.08] tracking-tight text-balance sm:mt-6 sm:text-[2.5rem] md:max-w-none md:text-[2.75rem] lg:max-w-[18ch] lg:text-[3rem] xl:text-[3.4rem]"
+            >
+              Scale your cloud infrastructure{" "}
+              <span className="text-gradient">without limits</span>
+            </motion.h1>
+
+            <motion.p
+              variants={item}
+              className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-white/60 sm:mt-6 sm:text-base md:text-lg"
+            >
+              Architect, migrate and run multi-cloud infrastructure across the
+              world&apos;s top three platforms — built for speed, security and
+              serious scale.
+            </motion.p>
+
+            <motion.div variants={item} className="mt-7 sm:mt-9">
+              <a
+                href="#contact"
+                data-lead
+                className="group inline-flex items-center gap-3 rounded-full bg-white py-2 pl-2 pr-6 text-sm font-semibold text-ink transition-all hover:shadow-[0_0_0_6px_rgba(255,255,255,0.12)] sm:pr-7"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-brand text-white transition-transform group-hover:translate-x-0.5 sm:h-11 sm:w-11">
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+                Free consultation
+              </a>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: EASE_OUT }}
+            className="relative lg:hidden"
+          >
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] ring-1 ring-white/10 sm:rounded-[2rem] md:aspect-[16/10]">
+              <Image
+                src="/images/hero-team.webp"
+                alt="ScaleView cloud engineers reviewing infrastructure in a data center"
+                fill
+                priority
+                sizes="(max-width: 1024px) 50vw, 90vw"
+                className="object-cover object-[62%_center]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       {/* ── DESKTOP IMAGE PANEL (bleeds left from ~38% viewport) ── */}
       <motion.div
@@ -119,7 +118,7 @@ export default function Hero() {
       >
         <div className="relative h-full w-full overflow-hidden rounded-tl-[80px] xl:rounded-tl-[100px]">
           <Image
-            src="/images/hero-team.png"
+            src="/images/hero-team.webp"
             alt="ScaleView cloud engineers reviewing infrastructure in a data center"
             fill
             priority

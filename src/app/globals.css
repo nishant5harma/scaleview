@@ -85,6 +85,12 @@ body {
   padding-inline: clamp(1rem, 3.5vw, 1.5rem);
 }
 
+@media (min-width: 768px) {
+  .container-x {
+    padding-inline: clamp(1.25rem, 4vw, 2rem);
+  }
+}
+
 .text-gradient {
   background: linear-gradient(100deg, #0b5cff 0%, #38bdf8 60%, #0b5cff 100%);
   -webkit-background-clip: text;
@@ -142,5 +148,50 @@ body {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Floating chatbot — plain CSS so mobile positioning always applies */
+.sv-chatbot-launcher {
+  position: fixed;
+  z-index: 9999;
+  right: 1rem;
+  bottom: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  touch-action: manipulation;
+}
+
+@supports (bottom: env(safe-area-inset-bottom)) {
+  .sv-chatbot-launcher {
+    bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 640px) {
+  .sv-chatbot-launcher {
+    right: 1.5rem;
+    bottom: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+.sv-chatbot-panel {
+  position: fixed;
+  z-index: 9999;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+  max-height: min(70dvh, calc(100dvh - 7rem));
+}
+
+@media (min-width: 640px) {
+  .sv-chatbot-panel {
+    left: auto;
+    right: 1.5rem;
+    bottom: 6rem;
+    width: min(calc(100vw - 2rem), 380px);
+    max-height: min(50vh, 420px);
   }
 }

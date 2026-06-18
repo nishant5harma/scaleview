@@ -66,10 +66,10 @@ export default function CloudPartners() {
         style={{ y: labelY }}
         className="relative mb-12 flex flex-col items-center gap-3"
       >
-        <span className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand">
-          <span className="h-px w-6 bg-brand/40" />
+        <span className="mx-auto flex max-w-xl flex-wrap items-center justify-center gap-x-3 gap-y-2 px-4 text-center text-xs font-semibold uppercase tracking-[0.18em] text-brand sm:tracking-[0.22em]">
+          <span className="hidden h-px w-6 bg-brand/40 sm:block" />
           Certified across the platforms that power the internet
-          <span className="h-px w-6 bg-brand/40" />
+          <span className="hidden h-px w-6 bg-brand/40 sm:block" />
         </span>
         <span className="grid h-7 w-7 place-items-center rounded-full ring-1 ring-brand/40">
           <span className="h-1.5 w-1.5 rounded-full bg-brand" />

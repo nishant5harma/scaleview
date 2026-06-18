@@ -112,7 +112,7 @@ export default async function ServicePage({
               </nav>
             </Reveal>
 
-            <div className="mt-10 grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
+            <div className="mt-10 grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-12 lg:gap-10">
               {/* LEFT */}
               <div className="lg:col-span-6 xl:col-span-5">
                 <Reveal>
@@ -122,7 +122,7 @@ export default async function ServicePage({
                   </span>
                 </Reveal>
                 <Reveal delay={0.05}>
-                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.5rem]">
+                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.5rem]">
                     {service.heroTitle}
                   </h1>
                 </Reveal>
@@ -204,7 +204,7 @@ export default async function ServicePage({
 
                     {/* floating highlight card (top-left, overlapping) */}
                     {highlights[0] && (
-                      <div className="absolute -left-4 top-8 hidden rounded-2xl border border-white/15 bg-navy/80 px-5 py-4 shadow-card backdrop-blur-xl sm:block lg:-left-10">
+                      <div className="absolute left-4 top-8 hidden rounded-2xl border border-white/15 bg-navy/80 px-5 py-4 shadow-card backdrop-blur-xl md:block lg:-left-10">
                         <p className="font-display text-2xl font-bold text-white">
                           {highlights[0].value}
                         </p>
@@ -215,7 +215,7 @@ export default async function ServicePage({
                     )}
 
                     {/* floating partner card (bottom-right, overlapping) */}
-                    <div className="absolute -bottom-5 -right-3 hidden items-center gap-3 rounded-2xl border border-white/15 bg-white px-4 py-3 shadow-card sm:flex lg:-right-8">
+                    <div className="absolute bottom-4 right-4 hidden items-center gap-3 rounded-2xl border border-white/15 bg-white px-4 py-3 shadow-card md:flex lg:-bottom-5 lg:-right-8">
                       <div className="flex -space-x-1.5">
                         {TRUST_LOGOS.map((l) => (
                           <span
@@ -241,7 +241,7 @@ export default async function ServicePage({
 
                     {/* floating secondary highlight (mid-right) */}
                     {highlights[1] && (
-                      <div className="absolute -right-6 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/15 bg-gradient-to-br from-brand to-brand-700 px-4 py-3 shadow-card xl:block">
+                      <div className="absolute right-4 top-1/2 hidden -translate-y-1/2 rounded-2xl border border-white/15 bg-gradient-to-br from-brand to-brand-700 px-4 py-3 shadow-card lg:block">
                         <p className="font-display text-lg font-bold text-white">
                           {highlights[1].value}
                         </p>
@@ -339,7 +339,7 @@ export default async function ServicePage({
 
         {/* BUSINESS CASE */}
         <section className="relative bg-white py-24">
-          <div className="container-x grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+          <div className="container-x grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-2 lg:gap-20">
             <Reveal>
               <div className="relative">
                 <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand/10 to-cyan/10 blur-2xl" />
@@ -400,7 +400,7 @@ export default async function ServicePage({
                     <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
                     {service.ctaEyebrow}
                   </span>
-                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                     {service.ctaTitle}
                   </h2>
                   <p className="mx-auto mt-4 max-w-lg text-base text-white/80">

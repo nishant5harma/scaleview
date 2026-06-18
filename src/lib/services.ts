@@ -32,8 +32,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Cloud Built for Where You're Going, Not Just Where You Are",
     heroDesc:
       "Whether you're migrating from on-premise, optimizing an existing cloud setup, or building cloud-native from scratch — ScaleView's certified cloud architects deliver outcomes that matter.",
-    heroImage: "/images/svc-cloud-real.png",
-    caseImage: "/images/svc-cloud.png",
+    heroImage: "/images/svc-cloud-real.webp",
+    caseImage: "/images/svc-cloud.webp",
     deliverables: [
       {
         num: "01",
@@ -89,8 +89,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Security That Moves as Fast as Your Business",
     heroDesc:
       "From zero-trust architecture to continuous compliance, ScaleView protects your cloud, data, and applications against modern threats — without slowing your teams down.",
-    heroImage: "/images/svc-security-real.png",
-    caseImage: "/images/svc-security.png",
+    heroImage: "/images/svc-security-real.webp",
+    caseImage: "/images/svc-security.webp",
     deliverables: [
       {
         num: "01",
@@ -146,8 +146,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Turn Raw Data into Real Decisions",
     heroDesc:
       "ScaleView builds the data platforms, analytics, and AI systems that turn scattered information into compounding business advantage — from dashboards to production GenAI.",
-    heroImage: "/images/svc-ai-real.png",
-    caseImage: "/images/svc-ai.png",
+    heroImage: "/images/svc-ai-real.webp",
+    caseImage: "/images/svc-ai.webp",
     deliverables: [
       {
         num: "01",
@@ -203,8 +203,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Ship Faster, Break Less, Sleep Better",
     heroDesc:
       "ScaleView builds the pipelines, infrastructure-as-code, and automation that let your teams release with confidence — and operate at scale without the firefighting.",
-    heroImage: "/images/svc-devops-real.png",
-    caseImage: "/images/svc-devops.png",
+    heroImage: "/images/svc-devops-real.webp",
+    caseImage: "/images/svc-devops.webp",
     deliverables: [
       {
         num: "01",
@@ -260,8 +260,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Your Cloud, Expertly Run — 24/7",
     heroDesc:
       "Hand off the operational heavy lifting. ScaleView monitors, secures, and optimizes your infrastructure around the clock, so your team can focus on the business.",
-    heroImage: "/images/svc-managed-real.png",
-    caseImage: "/images/svc-managed.png",
+    heroImage: "/images/svc-managed-real.webp",
+    caseImage: "/images/svc-managed.webp",
     deliverables: [
       {
         num: "01",
@@ -317,8 +317,8 @@ export const SERVICES: Service[] = [
     heroTitle: "Technology Strategy That Drives Real Outcomes",
     heroDesc:
       "ScaleView helps you modernize legacy systems, rethink processes, and adopt the technology that creates measurable business impact — strategy meets execution.",
-    heroImage: "/images/svc-transform-real.png",
-    caseImage: "/images/svc-transform.png",
+    heroImage: "/images/svc-transform-real.webp",
+    caseImage: "/images/svc-transform.webp",
     deliverables: [
       {
         num: "01",

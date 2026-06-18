@@ -43,7 +43,7 @@ export default function About() {
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-brand/10 to-cyan/10 blur-2xl" />
               <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-line shadow-card sm:aspect-[16/10] lg:aspect-[4/3]">
                 <Image
-                  src="/images/why-team.png"
+                  src="/images/why-team.webp"
                   alt="ScaleView team collaborating around a laptop in a modern office"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"

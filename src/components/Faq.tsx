@@ -68,7 +68,7 @@ function Item({
         >
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="flex-1 font-display text-base font-semibold tracking-tight text-ink sm:text-lg">
+        <span className="min-w-0 flex-1 font-display text-base font-semibold tracking-tight text-ink sm:text-lg">
           {q}
         </span>
         <span
@@ -110,7 +110,7 @@ export default function Faq() {
     <section id="faq" className="relative overflow-hidden bg-[#f7f9fc] py-24">
       <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-60" />
 
-      <div className="container-x relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <div className="container-x relative grid gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
             <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand">

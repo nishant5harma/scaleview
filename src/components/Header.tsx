@@ -108,11 +108,11 @@ export default function Header({ solid = false }: { solid?: boolean }) {
             )}
           </ul>
 
-          <div className="hidden items-center gap-3 lg:flex">
+          <div className="hidden items-center gap-3 md:flex">
             <Link
               href="/contact"
               data-lead
-              className="group inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(11,92,255,0.9)] transition-all hover:bg-brand-600 hover:shadow-[0_0_0_5px_rgba(11,92,255,0.25)]"
+              className="group inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2.5 text-sm font-semibold text-white shadow-[0_10px_30px_-10px_rgba(11,92,255,0.9)] transition-all hover:bg-brand-600 hover:shadow-[0_0_0_5px_rgba(11,92,255,0.25)] lg:px-5"
             >
               Get a quote
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -150,7 +150,7 @@ export default function Header({ solid = false }: { solid?: boolean }) {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 28, stiffness: 260 }}
-              className="absolute right-0 top-0 flex h-full w-[82%] max-w-sm flex-col overflow-y-auto bg-ink p-6"
+              className="absolute right-0 top-0 flex h-full w-[min(82vw,20rem)] flex-col overflow-y-auto bg-ink p-6 md:w-[min(60vw,22rem)]"
             >
               <div className="flex items-center justify-between">
                 <Logo light />

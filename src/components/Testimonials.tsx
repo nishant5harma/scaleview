@@ -56,7 +56,7 @@ export default function Testimonials() {
               transition={{ duration: 0.45 }}
               className="text-center"
             >
-              <p className="mt-4 font-display text-xl font-medium leading-relaxed text-ink sm:text-2xl">
+              <p className="mt-4 font-display text-lg font-medium leading-relaxed text-ink sm:text-xl md:text-2xl">
                 “{t.quote}”
               </p>
 

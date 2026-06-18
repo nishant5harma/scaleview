@@ -27,7 +27,7 @@ const CASES: CaseStudy[] = [
   {
     industry: "Logistics",
     service: "Cloud Migration",
-    image: "/images/case-logistics.png",
+    image: "/images/case-logistics.webp",
     challenge:
       "Aging on-premise infrastructure causing repeated outages and high maintenance costs.",
     solution:
@@ -42,7 +42,7 @@ const CASES: CaseStudy[] = [
   {
     industry: "Retail",
     service: "Data & AI",
-    image: "/images/case-retail.png",
+    image: "/images/case-retail.webp",
     challenge:
       "No visibility into inventory and demand patterns across 30 locations.",
     solution:
@@ -57,7 +57,7 @@ const CASES: CaseStudy[] = [
   {
     industry: "Financial Services",
     service: "Cybersecurity",
-    image: "/images/case-finance.png",
+    image: "/images/case-finance.webp",
     challenge:
       "Compliance gaps with SOC 2 Type II requirements and frequent audit failures.",
     solution:
@@ -72,7 +72,7 @@ const CASES: CaseStudy[] = [
   {
     industry: "Manufacturing",
     service: "DevOps",
-    image: "/images/case-manufacturing.png",
+    image: "/images/case-manufacturing.webp",
     challenge:
       "Software releases taking 3–4 weeks due to manual testing and deployment.",
     solution:
@@ -114,7 +114,7 @@ export default function CaseStudiesPage() {
               </nav>
             </Reveal>
 
-            <div className="mt-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+            <div className="mt-10 grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
               {/* LEFT */}
               <div>
                 <Reveal>
@@ -124,7 +124,7 @@ export default function CaseStudiesPage() {
                   </span>
                 </Reveal>
                 <Reveal delay={0.05}>
-                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.3rem]">
+                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.3rem]">
                     Real businesses. Real problems.{" "}
                     <span className="text-gradient">Real results.</span>
                   </h1>
@@ -203,7 +203,7 @@ export default function CaseStudiesPage() {
               const imageRight = i % 2 === 1;
               return (
                 <Reveal key={c.industry}>
-                  <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+                  <div className="grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:gap-16">
                     {/* IMAGE */}
                     <div className={imageRight ? "lg:order-2" : ""}>
                       <div className="relative">
@@ -294,7 +294,7 @@ export default function CaseStudiesPage() {
                     <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
                     Let&apos;s build
                   </span>
-                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                     Want results like these?
                   </h2>
                   <p className="mx-auto mt-4 max-w-lg text-base text-white/80">

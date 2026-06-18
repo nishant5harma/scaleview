@@ -83,7 +83,7 @@ export default function ContactPage() {
               </nav>
             </Reveal>
 
-            <div className="mt-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+            <div className="mt-10 grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
               {/* LEFT */}
               <div>
                 <Reveal>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   </span>
                 </Reveal>
                 <Reveal delay={0.05}>
-                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
+                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.4rem]">
                     Let&apos;s start a{" "}
                     <span className="text-gradient">conversation</span>
                   </h1>
@@ -105,23 +105,23 @@ export default function ContactPage() {
                   </p>
                 </Reveal>
                 <Reveal delay={0.15}>
-                  <div className="mt-9 flex flex-wrap gap-3">
+                  <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <a
                       href="#form"
-                      className="group inline-flex items-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_36px_-12px_rgba(11,92,255,0.9)] transition-all hover:bg-brand-600"
+                      className="group inline-flex items-center justify-center gap-2 rounded-xl bg-brand px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_36px_-12px_rgba(11,92,255,0.9)] transition-all hover:bg-brand-600"
                     >
                       Send a message
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
                     <a
                       href={`mailto:${EMAIL}`}
-                      className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                     >
-                      {EMAIL}
+                      Email us
                     </a>
                     <a
                       href={`tel:${PHONES[0].tel}`}
-                      className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                     >
                       {PHONES[0].display}
                     </a>
@@ -155,7 +155,7 @@ export default function ContactPage() {
 
                   <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.8)] sm:aspect-[5/4]">
                     <Image
-                      src="/images/start-person.png"
+                      src="/images/start-person.webp"
                       alt="Talk to a ScaleView consultant"
                       fill
                       priority
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* incoming bubble — overlaps left edge */}
-                  <div className="absolute -left-3 top-1/3 hidden max-w-[60%] items-end gap-2 sm:flex lg:-left-8">
+                  <div className="absolute left-4 top-1/3 hidden max-w-[55%] items-end gap-2 md:flex lg:-left-8 lg:max-w-[60%]">
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-brand to-cyan text-[0.7rem] font-bold text-white shadow-card">
                       SV
                     </span>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                   </div>
 
                   {/* reply bubble — overlaps bottom-right edge */}
-                  <div className="absolute -right-3 bottom-2 max-w-[72%] rounded-2xl rounded-br-sm bg-brand px-4 py-3 text-sm font-medium text-white shadow-[0_20px_45px_-18px_rgba(11,92,255,0.9)] sm:max-w-[60%] lg:-right-6">
+                  <div className="absolute bottom-2 right-4 max-w-[85%] rounded-2xl rounded-br-sm bg-brand px-4 py-3 text-sm font-medium text-white shadow-[0_20px_45px_-18px_rgba(11,92,255,0.9)] md:max-w-[70%] lg:-right-6 lg:max-w-[60%]">
                     Hey, could you tell me how to migrate to the cloud?
                     <span className="mt-1 block text-[0.7rem] font-normal text-white/70">
                       Typing…
@@ -199,7 +199,7 @@ export default function ContactPage() {
 
         {/* FORM */}
         <section id="form" className="relative bg-white py-24">
-          <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div className="container-x grid gap-12 md:grid-cols-2 md:gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
             <div>
               <Reveal>
                 <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand">
@@ -264,7 +264,7 @@ export default function ContactPage() {
               </Reveal>
             </div>
 
-            <div className="mt-14 grid gap-5 md:grid-cols-3">
+            <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {CONTACT_METHODS.map(({ Icon, title, text, action }, i) => (
                 <Reveal key={title} delay={i * 0.08}>
                   <div className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">

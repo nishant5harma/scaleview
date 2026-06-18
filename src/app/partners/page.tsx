@@ -139,7 +139,7 @@ export default function PartnersPage() {
               </nav>
             </Reveal>
 
-            <div className="mt-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+            <div className="mt-10 grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
               {/* LEFT */}
               <div>
                 <Reveal>
@@ -149,7 +149,7 @@ export default function PartnersPage() {
                   </span>
                 </Reveal>
                 <Reveal delay={0.05}>
-                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.06] tracking-tight text-balance sm:text-5xl lg:text-[3.3rem]">
+                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.06] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.3rem]">
                     AWS Partner. Azure Partner.{" "}
                     <span className="text-gradient">Google Cloud Partner.</span>
                   </h1>
@@ -192,7 +192,7 @@ export default function PartnersPage() {
                   <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand/30 to-cyan/20 blur-2xl" />
                   <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.8)]">
                     <Image
-                      src="/images/why-team.png"
+                      src="/images/why-team.webp"
                       alt="ScaleView certified team"
                       fill
                       priority
@@ -337,7 +337,7 @@ export default function PartnersPage() {
                     <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
                     Let&apos;s build
                   </span>
-                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                     Build on the right stack.
                   </h2>
                   <p className="mx-auto mt-4 max-w-lg text-base text-white/80">

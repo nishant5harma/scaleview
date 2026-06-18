@@ -8,27 +8,27 @@ import { ArrowUpRight } from "./Icons";
 
 const PROJECTS = [
   {
-    img: "/images/platform-visual.png",
+    img: "/images/platform-visual.webp",
     title: "Global retail multi-cloud",
     tags: ["Migration", "Multi-cloud"],
   },
   {
-    img: "/images/about-visual.png",
+    img: "/images/about-visual.webp",
     title: "Fintech edge network",
     tags: ["Edge", "Performance"],
   },
   {
-    img: "/images/service-security.png",
+    img: "/images/service-security.webp",
     title: "Healthcare compliance cloud",
     tags: ["Security", "Compliance"],
   },
   {
-    img: "/images/service-analytics.png",
+    img: "/images/service-analytics.webp",
     title: "SaaS cost optimization",
     tags: ["FinOps", "Scaling"],
   },
   {
-    img: "/images/service-devops.png",
+    img: "/images/service-devops.webp",
     title: "Media streaming pipeline",
     tags: ["DevOps", "Automation"],
   },

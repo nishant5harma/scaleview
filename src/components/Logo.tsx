@@ -12,7 +12,7 @@ export default function Logo({
     <Link href="/" className={`flex items-center gap-2.5 ${className}`}>
       <span className="relative inline-flex h-9 w-9 overflow-hidden rounded-[10px] shadow-[0_6px_18px_-6px_rgba(11,92,255,0.7)]">
         <Image
-          src="/images/logo.png"
+          src="/images/logo.webp"
           alt="ScaleView logo"
           fill
           sizes="36px"

@@ -21,11 +21,11 @@ const SOCIALS = ["in", "X", "f", "gh"];
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-navy text-white">
+    <footer className="relative overflow-hidden bg-navy pb-20 text-white sm:pb-0">
       <div className="pointer-events-none absolute inset-0 bg-grid-dark opacity-30" />
       <div className="container-x relative">
-        <div className="grid gap-10 py-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.3fr]">
-          <div>
+        <div className="grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="sm:col-span-2 lg:col-span-1">
             <Logo light />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/55">
               Your certified partner for AWS, Azure and Google Cloud —
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           ))}
 
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white">
               Stay in the loop
             </h4>

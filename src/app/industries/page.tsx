@@ -112,7 +112,7 @@ export default function IndustriesPage() {
               </nav>
             </Reveal>
 
-            <div className="mt-10 grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
+            <div className="mt-10 grid items-center gap-10 md:grid-cols-2 md:gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
               {/* LEFT */}
               <div>
                 <Reveal>
@@ -122,7 +122,7 @@ export default function IndustriesPage() {
                   </span>
                 </Reveal>
                 <Reveal delay={0.05}>
-                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-5xl lg:text-[3.5rem]">
+                  <h1 className="mt-6 font-display text-4xl font-bold leading-[1.05] tracking-tight text-balance sm:text-4xl md:text-5xl lg:text-[3.5rem]">
                     Sector expertise.{" "}
                     <span className="text-gradient">
                       Production-grade outcomes.
@@ -162,7 +162,7 @@ export default function IndustriesPage() {
                   {/* main image */}
                   <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-white/10 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.8)]">
                     <Image
-                      src="/images/ind-finance.png"
+                      src="/images/ind-finance.webp"
                       alt="Financial services analytics"
                       fill
                       priority
@@ -173,10 +173,10 @@ export default function IndustriesPage() {
                   </div>
 
                   {/* floating thumbnail — top right */}
-                  <div className="absolute -right-5 top-8 hidden w-40 overflow-hidden rounded-2xl border border-white/15 shadow-card sm:block lg:-right-10 lg:w-48">
+                  <div className="absolute right-4 top-8 hidden w-40 overflow-hidden rounded-2xl border border-white/15 shadow-card md:block lg:-right-10 lg:w-48">
                     <div className="relative aspect-[4/3]">
                       <Image
-                        src="/images/ind-retail.png"
+                        src="/images/ind-retail.webp"
                         alt="Retail and e-commerce"
                         fill
                         sizes="200px"
@@ -186,10 +186,10 @@ export default function IndustriesPage() {
                   </div>
 
                   {/* floating thumbnail — bottom left */}
-                  <div className="absolute -left-5 bottom-10 hidden w-44 overflow-hidden rounded-2xl border border-white/15 shadow-card sm:block lg:-left-12 lg:w-52">
+                  <div className="absolute bottom-10 left-4 hidden w-44 overflow-hidden rounded-2xl border border-white/15 shadow-card md:block lg:-left-12 lg:w-52">
                     <div className="relative aspect-[4/3]">
                       <Image
-                        src="/images/ind-health.png"
+                        src="/images/ind-health.webp"
                         alt="Healthcare and life sciences"
                         fill
                         sizes="220px"
@@ -386,7 +386,7 @@ export default function IndustriesPage() {
                     <span className="h-1.5 w-1.5 rounded-full bg-cyan" />
                     Let&apos;s build
                   </span>
-                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
+                  <h2 className="mt-6 font-display text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                     Don&apos;t see your industry?
                   </h2>
                   <p className="mx-auto mt-4 max-w-lg text-base text-white/80">

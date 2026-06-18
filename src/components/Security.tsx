@@ -35,14 +35,14 @@ export default function Security() {
       <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-50" />
       <div className="pointer-events-none absolute -left-24 top-20 h-80 w-80 rounded-full bg-brand/10 blur-[120px]" />
 
-      <div className="container-x relative grid items-stretch gap-14 lg:grid-cols-2">
+      <div className="container-x relative grid items-stretch gap-10 md:grid-cols-2 md:gap-12 lg:gap-14">
         {/* IMAGE SIDE */}
         <Reveal className="h-full">
           <div className="relative h-full">
             <div className="absolute -inset-4 rounded-[2.25rem] bg-gradient-to-tr from-brand/10 to-cyan/10 blur-2xl" />
             <div className="relative h-full min-h-[360px] overflow-hidden rounded-[2rem] border border-line shadow-card">
               <Image
-                src="/images/svc-security-real.png"
+                src="/images/svc-security-real.webp"
                 alt="Security operations analyst monitoring dashboards"
                 fill
                 sizes="(max-width: 1024px) 90vw, 45vw"
@@ -51,7 +51,7 @@ export default function Security() {
             </div>
 
             {/* floating badge */}
-            <div className="absolute -bottom-5 left-6 flex items-center gap-3 rounded-2xl border border-line bg-white px-5 py-3.5 shadow-card">
+            <div className="absolute bottom-4 left-4 flex max-w-[calc(100%-2rem)] items-center gap-3 rounded-2xl border border-line bg-white px-5 py-3.5 shadow-card md:left-6 lg:-bottom-5">
               <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand to-cyan text-white">
                 <ShieldIcon className="h-5 w-5" />
               </span>

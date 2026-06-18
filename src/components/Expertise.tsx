@@ -32,7 +32,7 @@ export default function Expertise() {
     <section className="relative overflow-hidden bg-[#eef2f9]">
       {/* background image */}
       <Image
-        src="/images/expertise-light.png"
+        src="/images/expertise-light.webp"
         alt="ScaleView team collaborating in a bright modern office"
         fill
         sizes="100vw"

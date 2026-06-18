@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   type ChatMessage,
@@ -21,12 +22,17 @@ function openLeadPopup() {
 }
 
 export default function Chatbot() {
+  const [mounted, setMounted] = useState(false);
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([GREETING]);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     scrollRef.current?.scrollTo({
@@ -88,7 +94,7 @@ export default function Chatbot() {
     }, 700 + Math.random() * 400);
   };
 
-  return (
+  const ui = (
     <>
       <AnimatePresence>
         {open && (
@@ -97,15 +103,15 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={reduce ? undefined : { opacity: 0, y: 16, scale: 0.96 }}
             transition={{ type: "spring", damping: 26, stiffness: 320 }}
-            className="fixed bottom-24 right-4 z-[55] flex w-[min(100vw-2rem,380px)] flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-[0_30px_80px_-20px_rgba(6,11,28,0.45)] sm:right-6"
+            className="sv-chatbot-panel flex flex-col overflow-hidden rounded-2xl border border-line bg-white shadow-[0_30px_80px_-20px_rgba(6,11,28,0.45)]"
             role="dialog"
+            aria-modal="true"
             aria-label="ScaleView chat assistant"
           >
-            {/* header */}
             <div className="flex items-center gap-3 bg-gradient-to-r from-brand to-brand-600 px-4 py-3.5 text-white">
               <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-xl bg-white/15">
                 <Image
-                  src="/images/logo.png"
+                  src="/images/logo.webp"
                   alt=""
                   width={40}
                   height={40}
@@ -129,10 +135,9 @@ export default function Chatbot() {
               </button>
             </div>
 
-            {/* messages */}
             <div
               ref={scrollRef}
-              className="flex max-h-[min(50vh,360px)] flex-col gap-3 overflow-y-auto bg-[#f7f9fc] p-4"
+              className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto bg-[#f7f9fc] p-4"
             >
               {messages.map((m) => (
                 <div
@@ -170,7 +175,6 @@ export default function Chatbot() {
               )}
             </div>
 
-            {/* quick replies */}
             <div className="flex flex-wrap gap-1.5 border-t border-line bg-white px-3 py-2.5">
               {QUICK_REPLIES.map((q) => (
                 <button
@@ -185,7 +189,6 @@ export default function Chatbot() {
               ))}
             </div>
 
-            {/* input */}
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -232,30 +235,34 @@ export default function Chatbot() {
         )}
       </AnimatePresence>
 
-      {/* launcher */}
-      <motion.button
+      <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? "Close chat" : "Open chat assistant"}
-        whileTap={reduce ? undefined : { scale: 0.94 }}
-        className="fixed bottom-5 right-4 z-[55] flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-brand to-brand-600 text-white shadow-[0_16px_40px_-12px_rgba(11,92,255,0.85)] transition-shadow hover:shadow-[0_20px_50px_-10px_rgba(11,92,255,0.9)] sm:right-6"
+        className="sv-chatbot-launcher flex items-center justify-center rounded-full bg-gradient-to-br from-brand to-brand-600 text-white shadow-[0_16px_40px_-12px_rgba(11,92,255,0.85)] ring-4 ring-white/90 transition-transform active:scale-95"
       >
-        {open ? (
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
-            <path d="M6 6l12 12M18 6 6 18" strokeLinecap="round" />
-          </svg>
-        ) : (
-          <>
-            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.8}>
-              <path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.3A8 8 0 1 1 21 12Z" strokeLinecap="round" strokeLinejoin="round" />
+        <span className="relative flex h-full w-full items-center justify-center">
+          {open ? (
+            <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={2}>
+              <path d="M6 6l12 12M18 6 6 18" strokeLinecap="round" />
             </svg>
-            <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-cyan text-[0.6rem] font-bold text-navy">
-              1
-            </span>
-          </>
-        )}
-      </motion.button>
+          ) : (
+            <>
+              <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth={1.8}>
+                <path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.3A8 8 0 1 1 21 12Z" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-cyan text-[0.6rem] font-bold text-navy">
+                1
+              </span>
+            </>
+          )}
+        </span>
+      </button>
     </>
   );
+
+  if (!mounted) return ui;
+
+  return createPortal(ui, document.body);
 }
