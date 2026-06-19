@@ -4,6 +4,7 @@ import "./globals.css";
 import PageLoader from "@/components/PageLoader";
 import DeferredWidgets from "@/components/DeferredWidgets";
 import GoogleTagManager from "@/components/GoogleTagManager";
+import { SITE_URL } from "@/lib/site";
 
 const display = Space_Grotesk({
   variable: "--font-display",
@@ -22,10 +23,13 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://scaleview.ai"),
+  metadataBase: new URL(SITE_URL),
   title: "ScaleView - AWS Cloud Consulting and IT Managed Services",
   description:
     "ScaleView — your AWS & Azure cloud consulting and AI-native managed IT partner for SMBs and mid-market. Migration, DevOps, cybersecurity & more.",
+  verification: {
+    google: "0-I5DDTzxWHepc7YX4WrvRZ1e1wION-G5eMhYDiNqOc",
+  },
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "any" }],
     apple: "/apple-icon.png",
